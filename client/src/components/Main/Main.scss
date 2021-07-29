@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    &__image {
+        &--img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        &--title {
+            font-size: 24px;
+        }
+        &--detail {
+            font-size: 20px;
+        }
+    }
+}
