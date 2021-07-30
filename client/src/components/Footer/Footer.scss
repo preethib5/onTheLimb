@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    padding: 1.5rem 1rem 1rem 1rem;
+    background-color: #3e8079;
+    color: #FFFFFF;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    height: 15vw;
+    bottom: 1;
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &--title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &--tag {
+            font-size: 14px;
+            padding-left: .5rem;
+            font-weight: 600;
+        }
+    }
+    &__header {
+        padding-left: 3rem;
+        font-weight: 600;
+    }
+    &__social-links {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        &--img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

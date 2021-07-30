@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none !important;
+    color: white;
+    height: 100;
+    background-color: #3e8079;
+    &__logo {
+        color: white;
+        padding: 2rem;
+        &--title {
+            color: white;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        margin: 1rem 1.5rem;
+        &--item-one {
+            color: white;
+            padding: 1rem;
+        }
+        &--item-three {
+            color: white;
+            padding: 2rem;
+        }
+    }
+    &__links {
+        text-decoration: none;
+    }
+}
+
+Link {
+    text-decoration: none;
+}
