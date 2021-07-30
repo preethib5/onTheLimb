@@ -1,7 +1,15 @@
 import "../Header/Header.scss" 
 import React, { Component } from 'react'
-
 import {Redirect,Link } from 'react-router-dom';
+import styled from "styled-components";
+
+const NavUnlisted = styled.ul`
+    text-decoration: none
+`;
+
+const linkStyle = {
+    textDecoration: "none"
+}
 
 export default class Header extends Component {
 
@@ -9,11 +17,13 @@ export default class Header extends Component {
        
         return (
             <header className="header">
-                <Link to={`/`} >
+                <NavUnlisted>
+                <Link to={`/`} className="header__links" style={linkStyle}>
                 <div className="header__logo">
                         <h1 className="header__logo--title">On The Limb</h1> 
                     </div>
                 </Link>
+                </NavUnlisted>
                     
                         <ul className="header__list">
                             <Link  to={`/`}><li className="header__list--item-one">Home</li></Link>

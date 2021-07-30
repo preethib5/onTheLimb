@@ -19,11 +19,10 @@ class Main extends Component{
   
 
    handleClick = () => {
-     debugger
     let random;
     //let max = 10;
     //getExercise();
-    let randomNum = Math.floor(Math.random() * this.props.exerciseData.length-1);
+    let randomNum = Math.floor(Math.random() * this.props.exerciseData.length);
     console.log(randomNum)
     let exercise= this.props.exerciseData.find((num) => Number(num.id) === randomNum)
     this.setState({
@@ -40,10 +39,12 @@ class Main extends Component{
     return (
       <>
         <div>
+          <h1 className="main__title">Stress Relief Exercises</h1>
           <button className="btn" onClick={this.handleClick}>
             GenerateExercise
           </button>
-          <div className="main">
+          {this.state.image && (          
+            <div className="main">
             <div className="main__image">
               <img
                 className="main__image--img"
@@ -55,7 +56,8 @@ class Main extends Component{
               <h3 className="main__container--title">{this.state.title}</h3>
               <p className="main__container--detail">{this.state.details}</p>
             </div>
-          </div>
+          </div>)}
+
         </div>
       </>
     );
