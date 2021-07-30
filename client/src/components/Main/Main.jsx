@@ -23,7 +23,7 @@ class Main extends Component{
     let random;
     //let max = 10;
     //getExercise();
-    let randomNum = Math.floor(Math.random() * this.props.exerciseData.length);
+    let randomNum = Math.floor(Math.random() * this.props.exerciseData.length-1);
     console.log(randomNum)
     let exercise= this.props.exerciseData.find((num) => Number(num.id) === randomNum)
     this.setState({
@@ -40,7 +40,7 @@ class Main extends Component{
     return (
       <>
         <div>
-          <button className="btn" onClick={this.handleClick  }>
+          <button className="btn" onClick={this.handleClick}>
             GenerateExercise
           </button>
           <div className="main">
