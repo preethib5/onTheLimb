@@ -2,13 +2,19 @@
     display: flex;
     &__image {
         &--img {
-            width: 100px;
-            height: 100px;
+            width: 350px;
+            height: 200px;
+            padding: rem;
+            position: relative;
+            left: 2rem;
+            border: 2px solid;
         }
     }
     &__container {
         display: flex;
         flex-direction: column;
+        width: 80vw;
+        padding-left: 6rem;
         &--title {
             font-size: 24px;
             font-weight: 600;

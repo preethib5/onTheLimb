@@ -5,6 +5,9 @@
     color: #FFFFFF;
     width: 100%;
     justify-content: center;
+    position: absolute;
+    height: 15vw;
+    bottom: 1;
     &__container {
         display: flex;
         justify-content: space-evenly;

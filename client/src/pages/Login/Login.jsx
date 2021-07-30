@@ -69,7 +69,7 @@ function Login() {
           </li>
         </ul>
        
-        <Link className="button" to={`/`}><button className="button" type="submit" disabled={!validateForm()}>Login</button></Link>  
+        <Link to={`/`}><button className="button" type="submit" disabled={!validateForm()}>Login</button></Link>  
 
       </fieldset>
 

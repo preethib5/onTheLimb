@@ -177,6 +177,10 @@ button {
     border-radius: 5px;
     background: #a8c7a9;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 1rem;
+    right: 2.5rem;
+    //margin: 0 15rem;
     &:hover {
         background-color: rgb(115, 115, 121);
         border: 1px solid #aaf;

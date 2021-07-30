@@ -28,7 +28,7 @@ export default class Header extends Component {
                         <ul className="header__list">
                             <Link  to={`/`}><li className="header__list--item-one">Home</li></Link>
                             {/* <Link  to={`/upload`} ><li className="header__list--item-two">Upload</li></Link> */}
-                            <li  className="header__list--item-three"> <Link to={`/login`} onClick={this.props.signOut}>SignOut</Link></li>
+                            <li  className="header__list--item-three"> <Link className="header__list--item-three" to={`/login`} onClick={this.props.signOut}>SignOut</Link></li>
                         </ul>
                        
             </header>
