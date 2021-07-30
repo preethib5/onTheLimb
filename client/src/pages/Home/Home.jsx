@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import "../Home/Home.scss";
 import Main from "../../components/Main/Main";
-
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import axios from "axios";
+
+
+import {Link, Redirect} from 'react-router-dom';
 
 class Home extends Component {
   state = {
     exerciseData: null,
+    islogout: false
   };
 
   setStateExercise = () => {
@@ -26,20 +31,25 @@ class Home extends Component {
   componentDidMount() {
     this.setStateExercise();
   }
+  signOut=()=>{
+    localStorage.removeItem("token");
+    this.setState({
+        isLogged:true,
+    })
+}
   render() {
+    if(this.state.isLogged){
+        return <Redirect  to={`/login`}/>
+    }
+    const { match } = this.props;
     console.log(this.state.exerciseData);
     return (
       <div>
-        {
-          this.state.exerciseData && (
-            <Main exerciseData={this.state.exerciseData} />
-          )
-          //(<div>{this.state.exerciseData.map((exe) => (<li>{exe.title}</li>))}</div>)
-        }
-
-        {/* {this.state.exerciseData && (
-         
-        )} */}
+        <Link to={`${match.path}`} ><Header signOut={this.signOut} /></Link>
+        {this.state.exerciseData && (
+          <Main exerciseData={this.state.exerciseData} />
+        )}
+        <Footer/>
       </div>
     );
   }
