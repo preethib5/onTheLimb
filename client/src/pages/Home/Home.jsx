@@ -11,7 +11,7 @@ class Home extends Component {
 
   setStateExercise = () => {
     axios
-      .get("/exercise")
+      .get("http://localhost:8080/exercise")
       .then((res) => {
         // console.log(res.data);
         this.setState({
